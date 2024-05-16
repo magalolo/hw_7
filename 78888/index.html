@@ -1,0 +1,93 @@
+<!-- Дз Задача:
+
+Создайте HTML-страницу с изображением <img> и двумя кнопками для увеличения и уменьшения размера изображения.
+Используя JavaScript, изменяйте размер изображения при нажатии кнопок. -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Изменение размера изображения</title>
+    
+</head>
+<body>
+    <img id="image" src="./a2d96fb527dcd219aec1aa16b0b93509.jpg" alt="Изображение">
+    <br>
+    <button onclick="zoomIn()">Увеличить</button>
+    <button onclick="zoomOut()">Уменьшить</button>
+
+   <script src="./script.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пример кнопки и формы с выводом статусов</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+
+<button id="changeColorButton">кнопка</button>
+<div id="colorChangeStatus"></div> 
+
+
+<div class="container">
+    <form id="myForm">
+        <label for="textField">Текстовое поле:</label><br>
+        <input type="text" id="textField" name="textField"><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="formSubmitStatus"></div>
+</div>
+
+<script>
+  
+    document.getElementById("changeColorButton").addEventListener("click", function() {
+        var newColor = getRandomColor();
+        document.body.style.backgroundColor = newColor;
+        document.getElementById("colorChangeStatus").innerText = "Цвет фона изменен на " + newColor;
+    });
+
+    
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+   
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        
+        var textFieldValue = document.getElementById("textField").value;
+        
+     
+        var statusElement = document.getElementById("formSubmitStatus");
+        if (textFieldValue.trim() !== "") {
+            statusElement.innerText = "Форма отправлена. Содержимое текстового поля: " + textFieldValue;
+        } else {
+            statusElement.innerText = "Ошибка: текстовое поле не должно быть пустым";
+        }
+    });
+</script>
+
+</body>
+</html> -->

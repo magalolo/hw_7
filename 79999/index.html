@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пример кнопки и формы</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Кнопка для изменения цвета фона -->
+<button id="changeColorButton">Изменить цвет фона</button>
+
+<!-- Форма с текстовым полем -->
+<div class="container">
+    <form id="myForm">
+        <label for="textField">Текстовое поле:</label><br>
+        <input type="text" id="textField" name="textField"><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<script>
+    // Функция для изменения цвета фона страницы
+    document.getElementById("changeColorButton").addEventListener("click", function() {
+        document.body.style.backgroundColor = getRandomColor();
+    });
+
+    // Функция для получения случайного цвета
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Обработчик отправки формы
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы
+
+        // Получаем значение текстового поля
+        var textFieldValue = document.getElementById("textField").value;
+        console.log("Содержимое текстового поля:", textFieldValue);
+    });
+</script>
+
+</body>
+</html>
